@@ -1,0 +1,87 @@
+---
+// src/components/HeroSection.astro
+---
+
+<div class="relative overflow-hidden bg-gradient-to-br from-[#1e8989] to-[#b43507] min-h-[80vh] flex items-center">
+  <!-- Animated background elements -->
+  <div class="absolute inset-0 opacity-20">
+    <div class="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxyZWN0IHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwwLjA1KSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNwYXR0ZXJuKSIvPjwvc3ZnPg==')]"></div>
+  </div>
+
+
+  <div class="container mx-auto px-6 relative z-10">
+    <div class="max-w-2xl">
+      <!-- Main headline with gradient text -->
+      <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+        <span class="bg-clip-text text-transparent bg-gradient-to-r from-[#00ccff] to-[#FF6B35]">
+          Transforma tu Producción<br>con Energía Circular
+        </span>
+      </h1>
+
+      <!-- Subheadline with animated underline -->
+      <div class="mb-10">
+        <p class="text-xl md:text-2xl text-white/90 mb-4">
+          Soluciones térmicamente eficientes para procesos industriales sostenibles
+        </p>
+        <div class="h-1 bg-gradient-to-r from-[#FF6B35] to-[#4CAF50] w-full max-w-xs" style="animation: drawUnderline 1.5s ease-out forwards"></div>
+      </div>
+
+
+      <!-- Dynamic metric counter -->
+      <div class="inline-flex items-center bg-[#333333]/20 backdrop-blur-sm px-6 py-3 rounded-full border border-[#4CAF50]/30 animate-float">
+        <span class="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#FF6B35] to-[#FF4500] mr-2" id="tempCounter">0</span>
+        <span class="text-white">°C reducidos en procesos industriales este año</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating factory illustration -->
+  <div class="absolute right-0 bottom-0 w-1/2 h-full opacity-30 md:opacity-50">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" class="w-full h-full">
+      <!-- Simplified factory SVG with circular arrows -->
+      <path d="M400,300 L600,300 L600,500 L400,500 Z" fill="#ffffff20" stroke="#ffffff40" stroke-width="2"/>
+      <circle cx="500" cy="400" r="80" fill="none" stroke="#4CAF50" stroke-width="3" stroke-dasharray="5,5"/>
+      <path d="M500,320 L500,280 L520,300 Z" fill="#4CAF50"/>
+      <animateTransform attributeName="transform" type="rotate" from="0 500 400" to="360 500 400" dur="20s" repeatCount="indefinite"/>
+    </svg>
+  </div>
+
+  <script is:inline>
+    // Temperature counter animation
+    let count = 0;
+    const target = 100;
+    const counter = document.getElementById('tempCounter');
+    const duration = 4700; // ms
+    const increment = target / (duration / 16);
+    
+    const animateCounter = () => {
+      count += increment;
+      if (count < target) {
+        counter.textContent = Math.floor(count);
+        requestAnimationFrame(animateCounter);
+      } else {
+        counter.textContent = target;
+      }
+    };
+    
+    window.addEventListener('load', () => {
+      setTimeout(animateCounter, 500);
+    });
+  </script>
+</div>
+<style>
+  @keyframes pulse {
+    0% { opacity: 0.8; }
+    50% { opacity: 1; transform: scale(1.05); }
+    100% { opacity: 0.8; }
+  }
+  @keyframes drawUnderline {
+    0% { width: 0; }
+    100% { width: 100%; }
+  }
+  @keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-5px); }
+    100% { transform: translateY(0px); }
+  }
+</style>

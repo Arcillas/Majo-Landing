@@ -1,0 +1,97 @@
+---
+// src/components/ServicesSection.astro
+import Consult from "@icons/Consult.astro";
+import Course from "@icons/Course.astro";
+import Advisory from "@icons/Advisory.astro";
+---
+
+<section id="services" class="py-16 h-full  bg-[#e3ffe4]">
+
+<div class="py-16">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-[#5a4a42] mb-4">
+        Nuestros Servicios Especializados
+      </h2>
+      <p class="text-lg text-[#5a4a42]/90 max-w-3xl mx-auto">
+        Soluciones diseñadas para implementar la manufactura circular en tu negocio
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      <!-- Tarjeta Consultoría -->
+      <div class="bg-white p-8 rounded-xl shadow-sm border-t-4 border-[#ffb38a] hover:shadow-md transition-all duration-300 hover:-translate-y-1">
+        <div class="text-[#ff8a5c] mb-4">
+          <Consult class="w-12 h-12" />
+        </div>
+        <h3 class="text-xl font-bold text-[#5a4a42] mb-3">Consultoría</h3>
+        <p class="text-[#5a4a42]/90 mb-4">
+          Diagnóstico y plan de implementación para manufactura circular adaptado a tus necesidades.
+        </p>
+        <div class="flex items-center justify-between mt-6">
+          <span class="text-[#ff6b35] font-medium">$150</span>
+          <span class="text-xs text-[#5a4a42]/70">Desde 2 semanas</span>
+        </div>
+      </div>
+
+      <!-- Tarjeta Cursos -->
+      <div class="bg-white p-8 rounded-xl shadow-sm border-t-4 border-[#ff8a5c] hover:shadow-md transition-all duration-300 hover:-translate-y-1">
+        <div class="text-[#ff6b35] mb-4">
+          <Course class="w-12 h-12" />
+        </div>
+        <h3 class="text-xl font-bold text-[#5a4a42] mb-3">Cursos</h3>
+        <p class="text-[#5a4a42]/90 mb-4">
+          Capacitación especializada para equipos técnicos y directivos en metodologías circulares.
+        </p>
+        <div class="flex items-center justify-between mt-6">
+          <span class="text-[#ff6b35] font-medium">$1,050</span>
+          <span class="text-xs text-[#5a4a42]/70">8-12 semanas</span>
+        </div>
+      </div>
+
+      <!-- Tarjeta Asesorías -->
+      <div class="bg-white p-8 rounded-xl shadow-sm border-t-4 border-[#ff6b35] hover:shadow-md transition-all duration-300 hover:-translate-y-1">
+        <div class="text-[#d45d35] mb-4">
+          <Advisory class="w-12 h-12" />
+        </div>
+        <h3 class="text-xl font-bold text-[#5a4a42] mb-3">Asesorías Personalizadas</h3>
+        <p class="text-[#5a4a42]/90 mb-4">
+          Acompañamiento continuo para implementación avanzada con métricas de impacto.
+        </p>
+        <div class="flex items-center justify-between mt-6">
+          <span class="text-[#ff6b35] font-medium">$1,550</span>
+          <span class="text-xs text-[#5a4a42]/70">Personalizado</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Indicador de temperatura -->
+    <div class="max-w-md mx-auto mt-12">
+      <div class="flex justify-between mb-2 text-sm text-[#5a4a42]/80">
+        <span>Básico</span>
+        <span>Avanzado</span>
+      </div>
+      <div class="h-2 bg-gray-200 rounded-full overflow-hidden">
+        <div class="h-full bg-gradient-to-r from-[#ffb38a] via-[#ff8a5c] to-[#ff6b35]" style="width: 70%"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  /* Animación sutil para las tarjetas */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .bg-white {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+  
+  .bg-white:nth-child(1) { animation-delay: 0.1s; }
+  .bg-white:nth-child(2) { animation-delay: 0.2s; }
+  .bg-white:nth-child(3) { animation-delay: 0.3s; }
+</style>
+
+</section>

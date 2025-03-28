@@ -1,0 +1,89 @@
+<!-- 
+<header 
+    id="header" 
+    class="py-6 px-12 flex justify-between items-center"
+>
+    <a href="#" aria-label="Regresa al inicio"> 
+        <img 
+            src="/icon.png" alt="Pro talent Icon" 
+            class="rounded-2xl h-12" /> 
+    </a>
+ 
+    <nav class="">
+        <a href="" class="text-l group m-4 relative w-max"> Servicios
+            <span
+                class="absolute -bottom-1 left-0 w-0 transition-all duration-300 h-0.5 bg-indigo-600 group-hover:w-full"
+            />
+        </a>  
+        <a href="" class="text-l group m-4 relative w-max"> Normativas
+            <span
+                class="absolute -bottom-1 left-0 w-0 transition-all duration-300 h-0.5 bg-indigo-600 group-hover:w-full"
+            />
+        </a>  
+        <a href="" class="text-l group m-4 relative w-max"> Precios
+            <span
+                class="absolute -bottom-1 left-0 w-0 transition-all duration-300 h-0.5 bg-indigo-600 group-hover:w-full"
+            />
+        </a>  
+        <a href="" class="text-l group m-4 relative w-max"> Impacto
+            <span
+                class="absolute -bottom-1 left-0 w-0 transition-all duration-300 h-0.5 bg-indigo-600 group-hover:w-full"
+            />
+        </a>  
+        <a href="" class="text-l group m-4 relative w-max"> Contacto 
+            <span
+                class="absolute -bottom-1 left-0 w-0 transition-all duration-300 h-0.5 bg-indigo-600 group-hover:w-full"
+            />
+        </a>  
+    </nav>
+
+</header> -->
+
+
+---
+// src/components/Header.astro
+---
+
+<header 
+    id="header" 
+    class="sticky top-0 z-50 py-4 px-6 md:px-12 flex justify-between items-center bg-white/90 backdrop-blur-sm shadow-sm"
+>
+    <a href="/" aria-label="Regresa al inicio" class="hover:scale-105 transition-transform duration-200 flex items-center space-x-2"> 
+        <img 
+            src="/icon.png" 
+            alt="Pro talent Icon" 
+            class="rounded-2xl h-10 md:h-12" 
+        /> 
+        <p class="font-bold text-2xl">Protalent</p>
+    </a>
+ 
+    <nav class="flex items-center space-x-2 md:space-x-6">
+
+        <a href="/#about-us" class="text-gray-700 hover:text-[#007B7B] group px-3 py-2 relative w-max transition-colors duration-200">
+            Acerca de Nosotros
+            <span class="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-0 transition-all duration-300 h-0.5 bg-[#FF6B35] group-hover:w-4/5" />
+        </a>  
+        <a href="/#services" class="text-gray-700 hover:text-[#007B7B] group px-3 py-2 relative w-max transition-colors duration-200">
+            Servicios
+            <span class="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-0 transition-all duration-300 h-0.5 bg-[#FF6B35] group-hover:w-4/5" />
+        </a>  
+        <a href="/#securitty" class="text-gray-700 hover:text-[#007B7B] group px-3 py-2 relative w-max transition-colors duration-200">
+            Seguridad
+            <span class="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-0 transition-all duration-300 h-0.5 bg-[#FF6B35] group-hover:w-4/5" />
+        </a>  
+        <a href="/#prices" class="text-gray-700 hover:text-[#007B7B] group px-3 py-2 relative w-max transition-colors duration-200">
+            Precios
+            <span class="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-0 transition-all duration-300 h-0.5 bg-[#FF6B35] group-hover:w-4/5" />
+        </a>  
+        <a href="/contact" class="ml-2 md:ml-4 px-4 py-2 bg-gradient-to-r from-[#007B7B] to-[#4CAF50] text-white rounded-full hover:shadow-md transition-all duration-300 hover:from-[#006666] hover:to-[#3d8b40]">
+            Contacto
+        </a>  
+    </nav>
+</header>
+
+<style>
+    /* Smooth scrolling for anchor links */
+    html {
+        scroll-behavior: smooth;
+    }
+</style>

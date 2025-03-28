@@ -1,0 +1,109 @@
+---
+// src/components/SecuritySection.astro
+import Shield from "@icons/Shield.astro"
+import Lock from "@icons/Lock.astro"
+import Data from "@icons/Data.astro"
+import Button from "@components/Button.astro"
+---
+<section id="securitty" class="py-16">
+
+<div class="py-16 bg-[#f8fafc]">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-12">
+      <div class="inline-flex items-center justify-center bg-[#007B7B]/10 p-4 rounded-full mb-4">
+        <Shield class="w-8 h-8 text-[#007B7B]" />
+      </div>
+      <h2 class="text-3xl md:text-4xl font-bold text-[#1e293b] mb-4">
+        Seguridad y Protección de Datos
+      </h2>
+      <p class="text-lg text-[#1e293b]/90 max-w-3xl mx-auto">
+        Garantizamos la máxima seguridad en el manejo de su información y procesos
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8 mb-12">
+      <!-- Medida 1 -->
+      <div class="bg-white p-8 rounded-xl shadow-sm border border-[#e2e8f0]">
+        <div class="text-[#007B7B] mb-4">
+          <Lock class="w-10 h-10" />
+        </div>
+        <h3 class="text-xl font-bold text-[#1e293b] mb-3">Encriptación de Datos</h3>
+        <p class="text-[#1e293b]/90 mb-4">
+          Todos los datos sensibles están protegidos con encriptación AES-256 tanto en tránsito como en reposo.
+        </p>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-3 py-1 bg-[#007B7B]/10 text-[#007B7B] text-sm rounded-full">SSL/TLS</span>
+          <span class="px-3 py-1 bg-[#007B7B]/10 text-[#007B7B] text-sm rounded-full">AES-256</span>
+        </div>
+      </div>
+
+      <!-- Medida 2 -->
+      <div class="bg-white p-8 rounded-xl shadow-sm border border-[#e2e8f0]">
+        <div class="text-[#4CAF50] mb-4">
+          <Data class="w-10 h-10" />
+        </div>
+        <h3 class="text-xl font-bold text-[#1e293b] mb-3">Protección Legal</h3>
+        <p class="text-[#1e293b]/90 mb-4">
+          Cumplimiento estricto con la Ley General de Protección de Datos y regulaciones internacionales.
+        </p>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-3 py-1 bg-[#4CAF50]/10 text-[#4CAF50] text-sm rounded-full">LGPD</span>
+          <span class="px-3 py-1 bg-[#4CAF50]/10 text-[#4CAF50] text-sm rounded-full">GDPR</span>
+        </div>
+      </div>
+
+      <!-- Medida 3 -->
+      <div class="bg-white p-8 rounded-xl shadow-sm border border-[#e2e8f0]">
+        <div class="text-[#FF6B35] mb-4">
+          <Shield class="w-10 h-10" />
+        </div>
+        <h3 class="text-xl font-bold text-[#1e293b] mb-3">Seguridad Operacional</h3>
+        <p class="text-[#1e293b]/90 mb-4">
+          Protocolos estrictos de acceso y autenticación multifactor para todo nuestro equipo.
+        </p>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-3 py-1 bg-[#FF6B35]/10 text-[#FF6B35] text-sm rounded-full">MFA</span>
+          <span class="px-3 py-1 bg-[#FF6B35]/10 text-[#FF6B35] text-sm rounded-full">OAuth 2.0</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-sm border border-[#e2e8f0] max-w-4xl mx-auto p-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+        <div>
+          <h3 class="text-xl font-bold text-[#1e293b] mb-2">¿Tienes preguntas sobre seguridad?</h3>
+          <p class="text-[#1e293b]/90">
+            Descarga nuestro whitepaper de seguridad o consulta nuestra política de privacidad.
+          </p>
+        </div>
+        <div class="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
+          <Button 
+            text="Ver Política" 
+            variant="outline" 
+            class="whitespace-nowrap justify-center"
+            href="#politica-privacidad"
+          />
+          <Button 
+            text="Descargar PDF" 
+            variant="primary" 
+            class="whitespace-nowrap justify-center"
+            href="/docs/security-whitepaper.pdf"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  /* Animaciones suaves */
+  .bg-white {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .bg-white:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  }
+</style>
+</section>

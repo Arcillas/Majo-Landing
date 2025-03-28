@@ -1,0 +1,160 @@
+---
+import Button from '@components/Button.astro'
+import Check from '@icons/Check.astro'
+---
+
+<section id="prices" class="py-16 bg-[#f8fafc]">
+
+<div class="py-16 bg-[#f8fafc]">
+  <div class="container mx-auto px-4 max-w-6xl">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-[#007B7B] mb-4">
+        Planes y Precios
+      </h2>
+      <p class="text-lg text-[#333333]/90 max-w-3xl mx-auto">
+        Selecciona el paquete que mejor se adapte a tus necesidades de manufactura circular
+      </p>
+    </div>
+
+    <!-- Tabla de precios -->
+    <div class="grid md:grid-cols-2 gap-8 mb-14">
+      <!-- Columna Cursos -->
+      <div class="bg-white rounded-xl shadow-md overflow-hidden border border-[#e2e8f0]">
+        <div class="bg-[#007B7B] p-6 text-white">
+          <h3 class="text-xl font-bold">Cursos Especializados</h3>
+          <p class="opacity-90">Formación práctica en manufactura circular</p>
+        </div>
+        <div class="p-6">
+          <div class="mb-6">
+            <span class="text-4xl font-bold text-[#007B7B]">$1,050</span>
+            <span class="text-[#64748b]"> / curso</span>
+          </div>
+          
+          <ul class="space-y-3 mb-8">
+            <li class="flex items-start">
+              <Check class="text-[#4CAF50] w-5 h-5 mt-0.5 mr-2 flex-shrink-0" />
+              <span>Duración: 8-12 semanas</span>
+            </li>
+            <li class="flex items-start">
+              <Check class="text-[#4CAF50] w-5 h-5 mt-0.5 mr-2 flex-shrink-0" />
+              <span>Materiales incluidos</span>
+            </li>
+            <li class="flex items-start">
+              <Check class="text-[#4CAF50] w-5 h-5 mt-0.5 mr-2 flex-shrink-0" />
+              <span>Certificación al completar</span>
+            </li>
+            <li class="flex items-start">
+              <Check class="text-[#4CAF50] w-5 h-5 mt-0.5 mr-2 flex-shrink-0" />
+              <span>Acceso a comunidad exclusiva</span>
+            </li>
+          </ul>
+          
+          <Button 
+            text="Inscribirse ahora" 
+            variant="primary" 
+            class="w-full justify-center"
+          />
+        </div>
+      </div>
+
+      <!-- Columna Asesorías -->
+      <div class="bg-white rounded-xl shadow-md overflow-hidden border border-[#e2e8f0]">
+        <div class="bg-[#4CAF50] p-6 text-white">
+          <h3 class="text-xl font-bold">Asesorías Personalizadas</h3>
+          <p class="opacity-90">Soluciones a medida para tu empresa</p>
+        </div>
+        <div class="p-6">
+          <div class="mb-6">
+            <span class="text-4xl font-bold text-[#4CAF50]">$1,550</span>
+            <span class="text-[#64748b]"> / mes</span>
+          </div>
+          
+          <ul class="space-y-3 mb-8">
+            <li class="flex items-start">
+              <Check class="text-[#4CAF50] w-5 h-5 mt-0.5 mr-2 flex-shrink-0" />
+              <span>Diagnóstico inicial gratuito</span>
+            </li>
+            <li class="flex items-start">
+              <Check class="text-[#4CAF50] w-5 h-5 mt-0.5 mr-2 flex-shrink-0" />
+              <span>Sesiones semanales con expertos</span>
+            </li>
+            <li class="flex items-start">
+              <Check class="text-[#4CAF50] w-5 h-5 mt-0.5 mr-2 flex-shrink-0" />
+              <span>Plan de implementación personalizado</span>
+            </li>
+            <li class="flex items-start">
+              <Check class="text-[#4CAF50] w-5 h-5 mt-0.5 mr-2 flex-shrink-0" />
+              <span>Reportes mensuales de progreso</span>
+            </li>
+          </ul>
+          
+          <div class="space-y-3">
+            <Button 
+              text="Solicitar consultoría" 
+              variant="secondary" 
+              class="w-full justify-center"
+            />
+            <Button 
+              text="Cotización personalizada" 
+              variant="outline" 
+              class="w-full justify-center"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Consultoría Básica -->
+    <div class="bg-white rounded-xl shadow-md overflow-hidden border border-[#e2e8f0] max-w-2xl mx-auto">
+      <div class="bg-[#FF6B35] p-6 text-white">
+        <h3 class="text-xl font-bold">Consultoría Básica</h3>
+        <p class="opacity-90">Para proyectos puntuales</p>
+      </div>
+      <div class="p-6">
+        <div class="mb-6">
+          <span class="text-4xl font-bold text-[#FF6B35]">$150</span>
+          <span class="text-[#64748b]"> / por proyecto</span>
+        </div>
+        
+        <ul class="space-y-3 mb-8">
+          <li class="flex items-start">
+            <Check class="text-[#4CAF50] w-5 h-5 mt-0.5 mr-2 flex-shrink-0" />
+            <span>Evaluación inicial de procesos</span>
+          </li>
+          <li class="flex items-start">
+            <Check class="text-[#4CAF50] w-5 h-5 mt-0.5 mr-2 flex-shrink-0" />
+            <span>Recomendaciones básicas</span>
+          </li>
+          <li class="flex items-start">
+            <Check class="text-[#4CAF50] w-5 h-5 mt-0.5 mr-2 flex-shrink-0" />
+            <span>Informe ejecutivo</span>
+          </li>
+          <li class="flex items-start">
+            <Check class="text-[#4CAF50] w-5 h-5 mt-0.5 mr-2 flex-shrink-0" />
+            <span>Soporte por email por 1 mes</span>
+          </li>
+        </ul>
+        
+        <Button 
+          text="Contratar consultoría" 
+          variant="primary" 
+          class="w-full justify-center"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  /* Animación sutil para las tarjetas */
+  .bg-white {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .bg-white:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  }
+</style>
+  
+</section>
