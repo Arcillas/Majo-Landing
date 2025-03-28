@@ -15,6 +15,9 @@
       "@icons/*": [
         "src/icons/*"
       ],
+      "@styles/*": [
+        "src/styles/*"
+      ],
     }
   },
   "include": [".astro/types.d.ts", "**/*"],
